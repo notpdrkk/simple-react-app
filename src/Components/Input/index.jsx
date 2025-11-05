@@ -1,3 +1,5 @@
+import styles from './style.module.css'
+
 export const Input = ({type, placeholder, onChange}) => {
 
   return (
@@ -6,6 +8,7 @@ export const Input = ({type, placeholder, onChange}) => {
       placeholder={placeholder}
       required
       onChange = {onChange}
+      className={styles.input}
     />
   )
 }

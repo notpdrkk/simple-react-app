@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router"
-import { Home } from './../Pages/Home/index';
-import Login from "../Pages/Login";
+import { Login } from "../Pages/Login";
+import { Home } from '../Pages/Home';
 
 const PageError = () => {
     return (
@@ -15,7 +15,7 @@ export const Routers = () => {
         <BrowserRouter> 
             <Routes> 
                 <Route path = '/Home' element = {<Home />}/>
-                <Route path = '/Login' element = {<Login />}/>
+                <Route path = '/' element = {<Login />}/>
                 <Route path = '*' element = {<PageError/>}/>
             </Routes>
         </BrowserRouter>
