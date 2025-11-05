@@ -3,12 +3,13 @@ import logo from "../../assets/pobreflix-logo.png";
 import { ButtonComponent } from "../../Components/Button";
 import { Input } from "../../Components/Input";
 
-const Login = () => {
+export const Login = () => {
   return (
     <div className={styles.container}>
       <img src={logo} alt="Logo da Pobreflix" className={styles.logo} />
-      <div className={styles.PainelDeLogin}>
-        <form>
+      <div className={styles.painelDeLogin}>
+        <h2 className={styles.logar}>Login</h2>
+        <form className={styles.form}>
           <Input
             type="email"
             placeholder="Digite seu email..."
@@ -25,10 +26,11 @@ const Login = () => {
             onChange={(e) => e.target.value}
           />
         </form>
-
-        <div className={styles.Campos}></div>
+        <a href="../Home">
+          <ButtonComponent text="Entrar" />
+        </a>
       </div>
     </div>
   );
 };
-export default Login;
+

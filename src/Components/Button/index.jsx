@@ -1,16 +1,10 @@
-import './style.css'
+import styles from './style.module.css'
 
-export const ButtonComponent = () => {
-
+export const ButtonComponent = ({ text, onClick }) => {
   return (
-      <div className='botao'>
-        
-        <button>Entrar</button>
-
-      </div>
-      
-
+    <button className={styles.botao} onClick={onClick}>
+      {text}
+    </button>
   );
 };
-
 
